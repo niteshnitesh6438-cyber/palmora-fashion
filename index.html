@@ -3,196 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Palmora | Elegant Girls' Kurtis</title>
+<title>Palmora | Girls' Kurtis</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:Arial,sans-serif;
-  background:#fffaf8;
-  color:#29201f;
+font-family:Arial,sans-serif;
+background:#fffaf8;
+color:#29201f;
 }
+
 header{
-  background:white;
-  padding:18px 6%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:100;
-  box-shadow:0 2px 12px #0001;
+background:#fff;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 12px #0001;
 }
-.logo{font-size:28px;font-weight:bold;color:#8b2342}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#8b2342;
+}
+
 nav a{
-  margin-left:18px;
-  text-decoration:none;
-  color:#333;
+margin-left:15px;
+text-decoration:none;
+color:#333;
 }
+
 .hero{
-  text-align:center;
-  padding:65px 20px;
-  background:linear-gradient(135deg,#f8e5e8,#fff7f1);
+text-align:center;
+padding:65px 20px;
+background:linear-gradient(135deg,#f7e2e7,#fff4ec);
 }
-.hero h1{font-size:46px;color:#7d203c}
-.hero p{margin:15px 0 25px;color:#665}
+
+.hero h1{
+font-size:45px;
+color:#7d203c;
+margin-bottom:12px;
+}
+
+.hero p{
+color:#666;
+margin-bottom:25px;
+}
+
 .btn{
-  display:inline-block;
-  background:#8b2342;
-  color:white;
-  padding:13px 24px;
-  border-radius:30px;
-  text-decoration:none;
-  border:0;
-  cursor:pointer;
-  font-weight:bold;
+background:#8b2342;
+color:#fff;
+border:0;
+padding:13px 24px;
+border-radius:25px;
+cursor:pointer;
+font-weight:bold;
 }
-.section{padding:55px 6%}
-.title{text-align:center;margin-bottom:30px}
+
+.section{
+padding:50px 6%;
+}
+
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
 .controls{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-bottom:30px;
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:30px;
 }
-.controls input,.controls select{
-  padding:12px;
-  border:1px solid #ddd;
-  border-radius:8px;
+
+.controls input,
+.controls select{
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+min-width:220px;
 }
+
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
+
 .product{
-  background:white;
-  border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 4px 18px #0001;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 18px #0001;
 }
-.product img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  cursor:pointer;
+
+.product-main{
+width:100%;
+height:360px;
+object-fit:cover;
+cursor:pointer;
 }
-.product-info{padding:18px}
-.product-info h3{margin-bottom:8px}
+
+.product-info{
+padding:18px;
+}
+
+.product-info h3{
+margin-bottom:8px;
+}
+
 .price{
-  font-size:22px;
-  font-weight:bold;
-  color:#8b2342;
-  margin:10px 0;
+font-size:23px;
+font-weight:bold;
+color:#8b2342;
+margin:8px 0;
 }
-.old-price{
-  color:#999;
-  text-decoration:line-through;
-  font-size:14px;
+
+.mrp{
+text-decoration:line-through;
+color:#999;
+font-size:14px;
 }
-.size{
-  color:#666;
-  margin:8px 0 15px;
+
+.sizes{
+display:flex;
+gap:6px;
+margin:12px 0;
 }
-.actions{
-  display:flex;
-  gap:8px;
+
+.sizes button{
+padding:7px 10px;
+border:1px solid #ddd;
+background:white;
+border-radius:6px;
+cursor:pointer;
 }
-.actions button{
-  flex:1;
-  padding:10px;
-  border-radius:8px;
-  border:0;
-  cursor:pointer;
+
+.sizes button.selected{
+background:#8b2342;
+color:white;
 }
-.cart-btn{background:#8b2342;color:white}
-.wish-btn{background:#f5e5e9;color:#8b2342}
+
+.product-buttons{
+display:flex;
+gap:8px;
+}
+
+.product-buttons button{
+flex:1;
+padding:11px;
+border:0;
+border-radius:8px;
+cursor:pointer;
+}
+
+.add{
+background:#8b2342;
+color:white;
+}
+
+.wish{
+background:#f6e7eb;
+color:#8b2342;
+}
+
+.gallery{
+display:flex;
+gap:6px;
+padding:8px;
+}
+
+.gallery img{
+width:55px;
+height:65px;
+object-fit:cover;
+border-radius:6px;
+cursor:pointer;
+}
+
 .info-box{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  margin:15px 0;
-  box-shadow:0 3px 15px #0001;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 3px 15px #0001;
+margin-bottom:20px;
 }
+
 table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:15px;
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
 }
+
 th,td{
-  padding:12px;
-  border:1px solid #ddd;
-  text-align:center;
+border:1px solid #ddd;
+padding:12px;
+text-align:center;
 }
+
 .cart{
-  position:fixed;
-  right:-400px;
-  top:0;
-  width:350px;
-  max-width:90%;
-  height:100%;
-  background:white;
-  z-index:200;
-  padding:25px;
-  box-shadow:-5px 0 20px #0002;
-  transition:.3s;
-  overflow:auto;
+position:fixed;
+right:-420px;
+top:0;
+width:380px;
+max-width:92%;
+height:100%;
+background:white;
+z-index:200;
+padding:25px;
+box-shadow:-5px 0 20px #0002;
+transition:.3s;
+overflow:auto;
 }
-.cart.open{right:0}
+
+.cart.open{
+right:0;
+}
+
 .close{
-  float:right;
-  cursor:pointer;
-  font-size:25px;
+float:right;
+font-size:28px;
+cursor:pointer;
 }
+
 .cart-item{
-  display:flex;
-  justify-content:space-between;
-  padding:12px 0;
-  border-bottom:1px solid #eee;
+border-bottom:1px solid #eee;
+padding:14px 0;
 }
+
+.qty{
+margin-top:8px;
+}
+
+.qty button{
+padding:4px 9px;
+margin:0 3px;
+}
+
 .total{
-  font-size:22px;
-  font-weight:bold;
-  margin:20px 0;
+font-size:22px;
+font-weight:bold;
+margin:20px 0;
 }
+
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:#0008;
-  z-index:300;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+display:none;
+position:fixed;
+inset:0;
+background:#0008;
+z-index:300;
+align-items:center;
+justify-content:center;
+padding:15px;
 }
+
 .modal-box{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  width:500px;
-  max-width:100%;
-  max-height:90vh;
-  overflow:auto;
+background:white;
+padding:25px;
+border-radius:15px;
+width:500px;
+max-width:100%;
+max-height:90vh;
+overflow:auto;
 }
-.modal input,.modal select{
-  width:100%;
-  padding:12px;
-  margin:7px 0 12px;
-  border:1px solid #ddd;
-  border-radius:8px;
+
+.modal input,
+.modal textarea,
+.modal select{
+width:100%;
+padding:12px;
+margin:7px 0 12px;
+border:1px solid #ddd;
+border-radius:8px;
 }
+
 footer{
-  background:#281b1e;
-  color:white;
-  text-align:center;
-  padding:30px;
+background:#281b1e;
+color:white;
+text-align:center;
+padding:30px;
 }
+
+.status{
+padding:15px;
+background:#f8e9ed;
+border-radius:10px;
+margin-top:15px;
+}
+
 @media(max-width:600px){
-  header{padding:15px}
-  nav{display:none}
-  .hero h1{font-size:34px}
-  .product img{height:330px}
+
+header{
+padding:14px;
+}
+
+nav{
+display:none;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.section{
+padding:35px 15px;
+}
+
+.product-main{
+height:330px;
+}
+
 }
 </style>
 </head>
@@ -200,536 +326,792 @@ footer{
 <body>
 
 <header>
-  <div class="logo">PALMORA</div>
-  <nav>
-    <a href="#products">Shop</a>
-    <a href="#size">Size Chart</a>
-    <a href="#shipping">Shipping</a>
-    <a href="#track">Track Order</a>
-    <a href="javascript:openCart()">🛒 Cart (<span id="cartCount">0</span>)</a>
-  </nav>
+
+<div class="logo">PALMORA</div>
+
+<nav>
+<a href="#products">Shop</a>
+<a href="#size">Size</a>
+<a href="#shipping">Shipping</a>
+<a href="#tracking">Track</a>
+<a href="javascript:openCart()">🛒 <span id="cartCount">0</span></a>
+</nav>
+
 </header>
 
+
 <section class="hero">
-  <h1>Elegant Girls' Kurtis</h1>
-  <p>Stylish • Comfortable • Beautiful</p>
-  <a href="#products" class="btn">Shop Now</a>
+
+<h1>Elegant Girls' Kurtis</h1>
+
+<p>Stylish • Comfortable • Beautiful</p>
+
+<button class="btn"
+onclick="document.getElementById('products').scrollIntoView()">
+Shop Now
+</button>
+
 </section>
+
 
 <section class="section" id="products">
 
-  <div class="title">
-    <h2>Our Collection</h2>
-    <p>Discover Palmora's latest collection</p>
-  </div>
+<div class="title">
+<h2>Our Collection</h2>
+<p>Discover Palmora's latest collection</p>
+</div>
 
-  <div class="controls">
-    <input id="search" type="text" placeholder="🔎 Search kurti..." onkeyup="showProducts()">
+<div class="controls">
 
-    <select id="category" onchange="showProducts()">
-      <option value="all">All Products</option>
-      <option value="kurti">Kurti</option>
-      <option value="new">New Arrivals</option>
-      <option value="best">Best Sellers</option>
-    </select>
-  </div>
+<input
+id="search"
+placeholder="🔎 Search Kurti..."
+oninput="displayProducts()">
 
-  <div class="products" id="productList"></div>
+<select id="category" onchange="displayProducts()">
+
+<option value="all">All Products</option>
+<option value="kurti">Kurti</option>
+<option value="new">New Arrivals</option>
+<option value="best">Best Sellers</option>
+
+</select>
+
+</div>
+
+<div class="products" id="productList"></div>
 
 </section>
+
 
 <section class="section" id="size">
-  <div class="title">
-    <h2>📏 Size Chart</h2>
-  </div>
 
-  <div class="info-box">
-    <table>
-      <tr>
-        <th>Size</th>
-        <th>Bust</th>
-        <th>Waist</th>
-        <th>Length</th>
-      </tr>
-      <tr><td>S</td><td>34"</td><td>30"</td><td>46"</td></tr>
-      <tr><td>M</td><td>36"</td><td>32"</td><td>46"</td></tr>
-      <tr><td>L</td><td>38"</td><td>34"</td><td>47"</td></tr>
-      <tr><td>XL</td><td>40"</td><td>36"</td><td>47"</td></tr>
-    </table>
-  </div>
+<div class="title">
+<h2>📏 Size Chart</h2>
+</div>
+
+<div class="info-box">
+
+<table>
+
+<tr>
+<th>Size</th>
+<th>Bust</th>
+<th>Waist</th>
+<th>Length</th>
+</tr>
+
+<tr>
+<td>S</td>
+<td>34"</td>
+<td>30"</td>
+<td>46"</td>
+</tr>
+
+<tr>
+<td>M</td>
+<td>36"</td>
+<td>32"</td>
+<td>46"</td>
+</tr>
+
+<tr>
+<td>L</td>
+<td>38"</td>
+<td>34"</td>
+<td>47"</td>
+</tr>
+
+<tr>
+<td>XL</td>
+<td>40"</td>
+<td>36"</td>
+<td>47"</td>
+</tr>
+
+</table>
+
+</div>
+
 </section>
+
 
 <section class="section" id="shipping">
-  <div class="title">
-    <h2>🚚 Shipping Information</h2>
-  </div>
 
-  <div class="info-box">
-    <h3>Delivery</h3>
-    <p>Orders are generally delivered within 3–7 working days.</p>
-    <br>
-    <h3>Shipping Charges</h3>
-    <p>Shipping charges, if applicable, will be shown during checkout.</p>
-    <br>
-    <h3>Order Confirmation</h3>
-    <p>After placing your order, you will receive an Order ID.</p>
-  </div>
+<div class="title">
+<h2>🚚 Shipping Information</h2>
+</div>
+
+<div class="info-box">
+
+<h3>Delivery Time</h3>
+<p>Orders are generally delivered within 3–7 working days.</p>
+
+<br>
+
+<h3>Shipping Charges</h3>
+<p>Shipping charges will be shown during checkout.</p>
+
+<br>
+
+<h3>Order Confirmation</h3>
+<p>After placing your order, you will receive a unique Order ID.</p>
+
+</div>
+
 </section>
 
-<section class="section" id="track">
-  <div class="title">
-    <h2>👤 Track Your Order</h2>
-  </div>
-
-  <div class="info-box">
-    <input id="trackId" type="text"
-      placeholder="Enter your Order ID"
-      style="padding:12px;width:100%;border:1px solid #ddd;border-radius:8px">
-
-    <br><br>
-
-    <button class="btn" onclick="trackOrder()">Track Order</button>
-
-    <p id="trackResult" style="margin-top:20px"></p>
-  </div>
-</section>
 
 <section class="section">
-  <div class="title">
-    <h2>❤️ Why Palmora?</h2>
-  </div>
 
-  <div class="info-box">
-    <p>✨ Elegant designs</p><br>
-    <p>✨ Comfortable fabrics</p><br>
-    <p>✨ Stylish ethnic wear</p><br>
-    <p>✨ Sizes S, M, L & XL</p>
-  </div>
+<div class="title">
+<h2>❤️ Wishlist</h2>
+</div>
+
+<div class="info-box">
+
+<p>Your wishlist products will be saved on this device.</p>
+
+<div id="wishlistList"></div>
+
+</div>
+
 </section>
+
+
+<section class="section" id="tracking">
+
+<div class="title">
+<h2>👤 Track Your Order</h2>
+</div>
+
+<div class="info-box">
+
+<input
+id="trackId"
+placeholder="Enter Order ID"
+style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px">
+
+<br><br>
+
+<button class="btn" onclick="trackOrder()">
+Track Order
+</button>
+
+<div id="trackResult"></div>
+
+</div>
+
+</section>
+
 
 <!-- CART -->
 
 <div class="cart" id="cart">
-  <span class="close" onclick="closeCart()">×</span>
 
-  <h2>🛒 Your Cart</h2>
+<span class="close" onclick="closeCart()">×</span>
 
-  <div id="cartItems" style="margin-top:30px"></div>
+<h2>🛒 Your Cart</h2>
 
-  <div class="total">
-    Total: ₹<span id="cartTotal">0</span>
-  </div>
+<div id="cartItems"></div>
 
-  <button class="btn" onclick="checkout()" style="width:100%">
-    Proceed to Checkout
-  </button>
+<div class="total">
+Total: ₹<span id="cartTotal">0</span>
 </div>
 
-<!-- CHECKOUT MODAL -->
+<button
+class="btn"
+style="width:100%"
+onclick="checkout()">
+
+Proceed to Checkout
+
+</button>
+
+</div>
+
+
+<!-- CHECKOUT -->
 
 <div class="modal" id="checkoutModal">
 
-  <div class="modal-box">
+<div class="modal-box">
 
-    <span class="close" onclick="closeCheckout()">×</span>
+<span class="close" onclick="closeCheckout()">×</span>
 
-    <h2>📦 Checkout</h2>
+<h2>📦 Checkout</h2>
 
-    <p style="margin:15px 0">
-      Enter your delivery details.
-    </p>
+<br>
 
-    <input id="customerName" placeholder="Full Name">
+<input id="name" placeholder="Full Name">
 
-    <input id="customerPhone"
-      type="tel"
-      placeholder="Mobile Number">
+<input id="phone" placeholder="Mobile Number">
 
-    <input id="customerAddress"
-      placeholder="Full Address">
+<textarea id="address"
+placeholder="Full Address"></textarea>
 
-    <input id="customerCity"
-      placeholder="City">
+<input id="city" placeholder="City">
 
-    <input id="customerPincode"
-      placeholder="Pincode">
+<input id="pincode" placeholder="Pincode">
 
-    <select id="payment">
-      <option value="cod">Cash on Delivery</option>
-    </select>
+<select id="payment">
 
-    <button class="btn"
-      onclick="placeOrder()"
-      style="width:100%;margin-top:10px">
-      Place Order
-    </button>
+<option>Cash on Delivery</option>
 
-    <p id="orderMessage"
-       style="margin-top:20px;font-weight:bold">
-    </p>
+</select>
 
-  </div>
+<button
+class="btn"
+style="width:100%;margin-top:10px"
+onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+<div id="orderMessage"></div>
+
 </div>
 
+</div>
+
+
 <footer>
-  <h2>PALMORA</h2>
-  <p>Elegant Girls' Kurtis & Ethnic Wear</p>
-  <br>
-  <p>© 2026 Palmora. All Rights Reserved.</p>
+
+<h2>PALMORA</h2>
+
+<p>Elegant Girls' Kurtis & Ethnic Wear</p>
+
+<br>
+
+<p>© 2026 Palmora. All Rights Reserved.</p>
+
 </footer>
+
 
 <script>
 
-const products = [
+const PRODUCTS=[
 
 {
- id:1,
- name:"Premium Ethnic Kurti",
- price:1099,
- category:"kurti",
- image:"product1.jpg"
+id:1,
+name:"Premium Ethnic Kurti",
+price:1099,
+category:"kurti",
+images:["product1.jpg","product2.jpg"]
 },
 
 {
- id:2,
- name:"Palmora Designer Kurti",
- price:1099,
- category:"new",
- image:"product2.jpg"
+id:2,
+name:"Palmora Designer Kurti",
+price:1099,
+category:"new",
+images:["product2.jpg","product1.jpg"]
 }
 
 ];
 
-let cart = JSON.parse(localStorage.getItem("palmoraCart")) || [];
-let orders = JSON.parse(localStorage.getItem("palmoraOrders")) || [];
 
-function showProducts(){
+let cart=JSON.parse(localStorage.getItem("palmoraCart"))||[];
 
-  const search =
-    document.getElementById("search").value.toLowerCase();
+let wishlistItems=
+JSON.parse(localStorage.getItem("palmoraWishlist"))||[];
 
-  const category =
-    document.getElementById("category").value;
+let orders=
+JSON.parse(localStorage.getItem("palmoraOrders"))||[];
 
-  const list =
-    document.getElementById("productList");
 
-  list.innerHTML="";
+function displayProducts(){
 
-  products
-  .filter(p =>
-    (p.name.toLowerCase().includes(search)) &&
-    (category==="all" || p.category===category)
-  )
-  .forEach(p=>{
+let search=
+document.getElementById("search").value.toLowerCase();
 
-    list.innerHTML += `
+let category=
+document.getElementById("category").value;
 
-    <div class="product">
+let box=document.getElementById("productList");
 
-      <img src="${p.image}"
-           onclick="openImage('${p.image}')">
+box.innerHTML="";
 
-      <div class="product-info">
+PRODUCTS
+.filter(p=>
+p.name.toLowerCase().includes(search)&&
+(category==="all"||p.category===category)
+)
+.forEach(p=>{
 
-        <h3>${p.name}</h3>
+box.innerHTML+=`
 
-        <div class="price">
-          ₹${p.price}
-        </div>
+<div class="product">
 
-        <div class="old-price">
-          ₹1,499
-        </div>
+<img
+id="main-${p.id}"
+class="product-main"
+src="${p.images[0]}"
+onclick="viewImage('${p.images[0]}')">
 
-        <div class="size">
-          Available Sizes: S, M, L, XL
-        </div>
+<div class="gallery">
 
-        <div class="actions">
+${p.images.map(img=>`
 
-          <button class="cart-btn"
-            onclick="addToCart(${p.id})">
-            🛒 Add to Cart
-          </button>
+<img
+src="${img}"
+onclick="changeImage(${p.id},'${img}')">
 
-          <button class="wish-btn"
-            onclick="wishlist(${p.id})">
-            ❤️
-          </button>
+`).join("")}
 
-        </div>
+</div>
 
-      </div>
+<div class="product-info">
 
-    </div>
+<h3>${p.name}</h3>
 
-    `;
+<div class="price">₹${p.price}</div>
 
-  });
+<div class="mrp">₹1,499</div>
+
+<p>Available Sizes:</p>
+
+<div class="sizes" id="sizes-${p.id}">
+
+${["S","M","L","XL"].map(size=>`
+
+<button
+onclick="selectSize(${p.id},'${size}',this)">
+${size}
+</button>
+
+`).join("")}
+
+</div>
+
+<div class="product-buttons">
+
+<button
+class="add"
+onclick="addToCart(${p.id})">
+
+🛒 Add to Cart
+
+</button>
+
+<button
+class="wish"
+onclick="addWishlist(${p.id})">
+
+❤️
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
 
 }
+
+
+let selectedSizes={};
+
+
+function selectSize(id,size,button){
+
+selectedSizes[id]=size;
+
+document
+.querySelectorAll(`#sizes-${id} button`)
+.forEach(b=>b.classList.remove("selected"));
+
+button.classList.add("selected");
+
+}
+
+
+function changeImage(id,img){
+
+document.getElementById(`main-${id}`).src=img;
+
+}
+
+
+function viewImage(img){
+
+window.open(img,"_blank");
+
+}
+
 
 function addToCart(id){
 
-  const product =
-    products.find(p=>p.id===id);
+let p=PRODUCTS.find(x=>x.id===id);
 
-  cart.push(product);
+let size=selectedSizes[id];
 
-  localStorage.setItem(
-    "palmoraCart",
-    JSON.stringify(cart)
-  );
+if(!size){
 
-  updateCart();
+alert("Please select a size.");
 
-  alert("Product added to cart 🛒");
+return;
 
 }
+
+cart.push({
+
+id:p.id,
+name:p.name,
+price:p.price,
+size:size
+
+});
+
+saveCart();
+
+alert("✅ Product added to cart");
+
+}
+
+
+function saveCart(){
+
+localStorage.setItem(
+"palmoraCart",
+JSON.stringify(cart)
+);
+
+updateCart();
+
+}
+
 
 function updateCart(){
 
-  document.getElementById("cartCount").innerText =
-    cart.length;
+document.getElementById("cartCount").innerText=cart.length;
 
-  const box =
-    document.getElementById("cartItems");
+let box=document.getElementById("cartItems");
 
-  box.innerHTML="";
+box.innerHTML="";
 
-  let total=0;
+let total=0;
 
-  cart.forEach((p,index)=>{
+cart.forEach((p,index)=>{
 
-    total += p.price;
+total+=p.price;
 
-    box.innerHTML += `
+box.innerHTML+=`
 
-      <div class="cart-item">
+<div class="cart-item">
 
-        <span>${p.name}</span>
+<b>${p.name}</b>
 
-        <b>₹${p.price}</b>
+<br>
 
-        <button onclick="removeCart(${index})">
-          ❌
-        </button>
+Size: ${p.size}
 
-      </div>
+<br>
 
-    `;
+₹${p.price}
 
-  });
+<div class="qty">
 
-  document.getElementById("cartTotal").innerText =
-    total;
+<button onclick="removeCart(${index})">
+Remove
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("cartTotal").innerText=total;
 
 }
+
 
 function removeCart(index){
 
-  cart.splice(index,1);
+cart.splice(index,1);
 
-  localStorage.setItem(
-    "palmoraCart",
-    JSON.stringify(cart)
-  );
-
-  updateCart();
+saveCart();
 
 }
+
 
 function openCart(){
 
-  document.getElementById("cart")
-    .classList.add("open");
+document.getElementById("cart").classList.add("open");
 
 }
+
 
 function closeCart(){
 
-  document.getElementById("cart")
-    .classList.remove("open");
+document.getElementById("cart").classList.remove("open");
 
 }
+
 
 function checkout(){
 
-  if(cart.length===0){
+if(cart.length===0){
 
-    alert("Your cart is empty.");
+alert("Your cart is empty.");
 
-    return;
-
-  }
-
-  closeCart();
-
-  document.getElementById("checkoutModal")
-    .style.display="flex";
+return;
 
 }
+
+closeCart();
+
+document.getElementById("checkoutModal").style.display="flex";
+
+}
+
 
 function closeCheckout(){
 
-  document.getElementById("checkoutModal")
-    .style.display="none";
+document.getElementById("checkoutModal").style.display="none";
 
 }
 
-function placeOrder(){
 
-  const name =
-    document.getElementById("customerName").value;
+function addWishlist(id){
 
-  const phone =
-    document.getElementById("customerPhone").value;
+let p=PRODUCTS.find(x=>x.id===id);
 
-  const address =
-    document.getElementById("customerAddress").value;
+if(!wishlistItems.some(x=>x.id===id)){
 
-  const city =
-    document.getElementById("customerCity").value;
+wishlistItems.push(p);
 
-  const pincode =
-    document.getElementById("customerPincode").value;
+localStorage.setItem(
+"palmoraWishlist",
+JSON.stringify(wishlistItems)
+);
 
-  if(!name || !phone || !address || !city || !pincode){
+alert("❤️ Added to Wishlist");
 
-    alert("Please fill all details.");
+displayWishlist();
 
-    return;
+}else{
 
-  }
-
-  const orderId =
-    "PAL" + Date.now().toString().slice(-6);
-
-  const total =
-    cart.reduce((sum,p)=>sum+p.price,0);
-
-  const order = {
-
-    orderId:orderId,
-
-    name:name,
-
-    phone:phone,
-
-    address:address,
-
-    city:city,
-
-    pincode:pincode,
-
-    products:cart,
-
-    total:total,
-
-    status:"Order Received",
-
-    date:new Date().toLocaleString()
-
-  };
-
-  orders.push(order);
-
-  localStorage.setItem(
-    "palmoraOrders",
-    JSON.stringify(orders)
-  );
-
-  document.getElementById("orderMessage").innerHTML =
-
-    "✅ Order placed successfully!<br><br>" +
-
-    "Your Order ID: <b>" +
-    orderId +
-    "</b><br><br>" +
-
-    "Please save this Order ID for tracking.";
-
-  cart=[];
-
-  localStorage.setItem(
-    "palmoraCart",
-    JSON.stringify(cart)
-  );
-
-  updateCart();
+alert("Already in Wishlist");
 
 }
+
+}
+
+
+function displayWishlist(){
+
+let box=document.getElementById("wishlistList");
+
+if(wishlistItems.length===0){
+
+box.innerHTML="<p>No wishlist products yet.</p>";
+
+return;
+
+}
+
+box.innerHTML=wishlistItems.map(p=>`
+
+<div style="padding:12px 0;border-bottom:1px solid #eee">
+
+<b>${p.name}</b>
+
+<br>
+
+₹${p.price}
+
+</div>
+
+`).join("");
+
+}
+
+
+async function placeOrder(){
+
+let name=document.getElementById("name").value.trim();
+
+let phone=document.getElementById("phone").value.trim();
+
+let address=document.getElementById("address").value.trim();
+
+let city=document.getElementById("city").value.trim();
+
+let pincode=document.getElementById("pincode").value.trim();
+
+if(!name||!phone||!address||!city||!pincode){
+
+alert("Please fill all details.");
+
+return;
+
+}
+
+
+let orderId=
+"PAL"+Date.now().toString().slice(-7);
+
+let total=
+cart.reduce((sum,p)=>sum+p.price,0);
+
+
+let order={
+
+orderId:orderId,
+name:name,
+phone:phone,
+address:address,
+city:city,
+pincode:pincode,
+items:cart,
+total:total,
+status:"Order Received",
+date:new Date().toLocaleString()
+
+};
+
+
+orders.push(order);
+
+localStorage.setItem(
+"palmoraOrders",
+JSON.stringify(orders)
+);
+
+
+/* GOOGLE SHEET CONNECTION
+
+Apna Google Apps Script Web App URL
+neeche paste karna hai.
+
+*/
+
+const GOOGLE_SCRIPT_URL="PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+
+if(GOOGLE_SCRIPT_URL.startsWith("https://")){
+
+try{
+
+await fetch(GOOGLE_SCRIPT_URL,{
+
+method:"POST",
+
+mode:"no-cors",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify(order)
+
+});
+
+}catch(e){
+
+console.log(e);
+
+}
+
+}
+
+
+document.getElementById("orderMessage").innerHTML=`
+
+<div class="status">
+
+<h3>✅ Order Placed Successfully!</h3>
+
+<br>
+
+<p><b>Your Order ID:</b></p>
+
+<h2>${orderId}</h2>
+
+<br>
+
+<p>Order status: <b>Order Received</b></p>
+
+<br>
+
+<p>Is Order ID ko save kar लें. Isi se order track kar sakte hain.</p>
+
+</div>
+
+`;
+
+
+cart=[];
+
+saveCart();
+
+}
+
 
 function trackOrder(){
 
-  const id =
-    document.getElementById("trackId").value.trim();
+let id=
+document.getElementById("trackId").value.trim();
 
-  const order =
-    orders.find(o=>o.orderId===id);
+let order=
+orders.find(x=>x.orderId===id);
 
-  const result =
-    document.getElementById("trackResult");
+let box=
+document.getElementById("trackResult");
 
-  if(!order){
 
-    result.innerHTML =
-      "❌ Order ID not found.";
+if(!order){
 
-    return;
+box.innerHTML=`
 
-  }
+<div class="status">
+❌ Order ID not found.
+</div>
 
-  result.innerHTML =
+`;
 
-    "✅ Order Found<br><br>" +
-
-    "<b>Order ID:</b> " +
-    order.orderId +
-
-    "<br><b>Status:</b> " +
-    order.status +
-
-    "<br><b>Total:</b> ₹" +
-    order.total;
+return;
 
 }
 
-function wishlist(id){
 
-  const product =
-    products.find(p=>p.id===id);
+box.innerHTML=`
 
-  let wishlist =
-    JSON.parse(localStorage.getItem("palmoraWishlist")) || [];
+<div class="status">
 
-  if(!wishlist.some(p=>p.id===id)){
+<h3>📦 Order Found</h3>
 
-    wishlist.push(product);
+<br>
 
-    localStorage.setItem(
-      "palmoraWishlist",
-      JSON.stringify(wishlist)
-    );
+<p><b>Order ID:</b> ${order.orderId}</p>
 
-    alert("❤️ Added to Wishlist");
+<p><b>Status:</b> ${order.status}</p>
 
-  }else{
+<p><b>Total:</b> ₹${order.total}</p>
 
-    alert("Already in Wishlist");
+<p><b>Date:</b> ${order.date}</p>
 
-  }
+</div>
+
+`;
 
 }
 
-function openImage(src){
 
-  window.open(src,"_blank");
+displayProducts();
 
-}
+displayWishlist();
 
-showProducts();
 updateCart();
 
 </script>
